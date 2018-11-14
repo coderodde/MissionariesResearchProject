@@ -22,20 +22,45 @@ public final class GameConfiguration {
      * Specifies the lower limit on the amount of cannibals.
      */
     public static final int MINIMUM_TOTAL_NUMBER_OF_CANNIBALS    = 1;
+    
+    /**
+     * Specifies the lower limit on the boat capacity.
+     */
     public static final int MINIMUM_TOTAL_NUMBER_OF_ACTORS       = 1;
     
+    /**
+     * The total number of missionaries.
+     */
     private final int totalNumberOfMissionaries;
     
+    /**
+     * The total number of cannibals.
+     */
     private final int totalNumberOfCannibals;
     
+    /**
+     * The boat capacity.
+     */
     private final int boatCapacity;
     
-    GameConfiguration(final int totalNumberOfMissionaries,
-                      final int totalNumberOfCannibals,
-                      final int boatCapacity) {
+    public  GameConfiguration(final int totalNumberOfMissionaries,
+                              final int totalNumberOfCannibals,
+                              final int boatCapacity) {
         checkTotalNumberOfMissionaries  (totalNumberOfMissionaries);
         checkTotalNumberOfCannibals     (totalNumberOfCannibals);
         checkBoatCapacity               (boatCapacity);
+        
+        this.totalNumberOfMissionaries = totalNumberOfMissionaries;
+        this.totalNumberOfCannibals    = totalNumberOfCannibals;
+        this.boatCapacity              = boatCapacity;
+    }
+    
+    public int getTotalNumberOfMissionaries() {
+        return totalNumberOfMissionaries;
+    }
+    
+    public int getTotalNumberOfCannibals() {
+        return totalNumberOfCannibals;
     }
     
     /**
