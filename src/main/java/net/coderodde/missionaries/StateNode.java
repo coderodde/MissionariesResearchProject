@@ -13,6 +13,12 @@ import java.util.Objects;
  */
 final class StateNode {
     
+    private static int counter;
+    
+    static int getCounter() {
+        return counter;
+    }
+    
     /**
      * The number of missionaries on the source bank. The number of missionaries
      * on the target bank is {@code gameParameters.getTotalNumber}
@@ -65,6 +71,7 @@ final class StateNode {
               int numberOfCannibalsOnSourceBank,
               GameParameters configuration,
               BoatLocation boatLocation) {
+        counter++;
         this.numberOfMissionariesOnSourceBank = 
                 numberOfMissionariesOnSourceBank;
         
