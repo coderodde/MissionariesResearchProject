@@ -1,4 +1,4 @@
-package net.coderodde.research.missionaries;
+package net.coderodde.research.missionaries.old;
 
 import java.util.List;
 

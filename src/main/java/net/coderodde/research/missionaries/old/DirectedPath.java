@@ -1,4 +1,4 @@
-package net.coderodde.research.missionaries;
+package net.coderodde.research.missionaries.old;
 
 /**
  * This class implements an oriented sequence finder, that is, it is searching 
